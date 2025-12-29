@@ -6,6 +6,7 @@
     <title>Muziclly | The Future of Music Education Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- React & Babel Standalone -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
@@ -27,6 +28,15 @@
         .hero-glow { position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 80%; height: 40%; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%); z-index: -1; }
         .border-glow:hover { border-color: rgba(99, 102, 241, 0.5); box-shadow: 0 0 20px rgba(99, 102, 241, 0.1); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        
+        /* Floating Button Animations */
+        .float-contact {
+            animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0) translateY(100px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -38,15 +48,34 @@
                 <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center font-black italic text-xl text-white">M</div>
                 <div class="text-2xl font-extrabold tracking-tighter uppercase">Muziclly</div>
             </div>
-            <div class="hidden lg:flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">
-                <a href="#thesis" class="hover:text-white transition-colors">01. Thesis</a>
-                <a href="#product" class="hover:text-white transition-colors">02. Product</a>
-                <a href="#founder" class="hover:text-white transition-colors">03. Resilience</a>
-                <a href="#economics" class="hover:text-white transition-colors">04. Economics</a>
-                <a href="#ask" class="hover:text-white transition-colors">05. The Ask</a>
-                <a href="https://avishkarroopi.github.io/Muziclly-Investors-Portal/" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors">Live Portal</a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center gap-8">
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500 mr-6">
+                    <a href="#thesis" class="hover:text-white transition-colors">01. Thesis</a>
+                    <a href="#product" class="hover:text-white transition-colors">02. Product</a>
+                    <a href="#founder" class="hover:text-white transition-colors">03. Resilience</a>
+                    <a href="#economics" class="hover:text-white transition-colors">04. Economics</a>
+                </div>
+                
+                <!-- Muziclly Web & App Buttons -->
+                <div class="flex gap-3">
+                    <a href="https://avishkarroopi.github.io/muzicllyworld/" target="_blank" class="px-4 py-2 glass text-[10px] font-black uppercase tracking-widest text-indigo-400 hover:bg-white/5 rounded-lg border border-indigo-500/20 transition-all">
+                        Muziclly Web
+                    </a>
+                    <a href="https://avishkarroopi.github.io/muzicllyworld/" target="_blank" class="px-4 py-2 glass text-[10px] font-black uppercase tracking-widest text-indigo-400 hover:bg-white/5 rounded-lg border border-indigo-500/20 transition-all">
+                        Muziclly App
+                    </a>
+                </div>
+
+                <a href="mailto:founder@muziclly.com" class="ml-4 bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-indigo-600/20">Access Room</a>
             </div>
-            <a href="mailto:founder@muziclly.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-indigo-600/20">Access Room</a>
+
+            <!-- Mobile Version -->
+            <div class="lg:hidden flex gap-2">
+                <a href="https://avishkarroopi.github.io/muzicllyworld/" target="_blank" class="px-3 py-1.5 glass text-[9px] font-black uppercase tracking-widest text-indigo-400 rounded-lg">Web</a>
+                <a href="https://avishkarroopi.github.io/muzicllyworld/" target="_blank" class="px-3 py-1.5 glass text-[9px] font-black uppercase tracking-widest text-indigo-400 rounded-lg">App</a>
+            </div>
         </div>
     </nav>
 
@@ -69,7 +98,7 @@
                     Start Exploration
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
-                <a href="https://avishkarroopi.github.io/Muziclly-Investors-Portal/" target="_blank" class="px-10 py-5 glass text-white font-extrabold rounded-2xl hover:bg-white/5 transition-all flex items-center justify-center gap-3 border border-white/10">
+                <a href="https://avishkarroopi.github.io/muzicllyworld/" target="_blank" class="px-10 py-5 glass text-white font-extrabold rounded-2xl hover:bg-white/5 transition-all flex items-center justify-center gap-3 border border-white/10">
                     Visit Live Portal
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
@@ -168,8 +197,9 @@
     <section id="founder" class="py-32 px-6 bg-zinc-950/50">
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row gap-16 items-center">
+                <!-- Circular Portrait Container -->
                 <div class="w-64 h-64 rounded-full bg-indigo-600/20 border-2 border-indigo-500/50 shrink-0 flex items-center justify-center overflow-hidden">
-                    <span class="text-4xl font-black italic opacity-50">PORTRAIT</span>
+                    <img src="avishkar-roopi.jpg" alt="Dr. Avishkar Roopi" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-indigo-500 mb-4">Chapter 03: The Pedigree</h2>
@@ -270,7 +300,6 @@
             </div>
             
             <div id="simulator-root" class="rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 bg-white" style="min-height: 800px;">
-                <!-- React App Mounts Here -->
                 <div class="w-full h-full flex items-center justify-center p-20 text-zinc-400 italic">
                     Loading Simulation Engine...
                 </div>
@@ -313,32 +342,34 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="flex flex-col gap-2">
                 <div class="text-2xl font-black italic">MUZICLLY</div>
-                <a href="https://avishkarroopi.github.io/Muziclly-Investors-Portal/" target="_blank" class="text-[10px] text-indigo-400 hover:underline font-bold uppercase tracking-widest">Live Investor Portal</a>
+                <a href="https://avishkarroopi.github.io/muzicllyworld/" target="_blank" class="text-[10px] text-indigo-400 hover:underline font-bold uppercase tracking-widest">Live Investor Portal</a>
             </div>
             <div class="text-zinc-600 text-[10px] uppercase tracking-[0.4em]">© 2024 Muziclly EdTech Pvt Ltd | Hyderabad</div>
         </div>
     </footer>
 
+    <!-- Floating Contact Actions -->
+    <div class="fixed bottom-8 right-8 flex flex-col gap-4 z-[100] float-contact">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919550429016" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer border-2 border-white/20">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+919550429016" class="w-14 h-14 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer border-2 border-white/20">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
     <!-- Financial Engine Integration -->
     <script type="text/babel">
-        /**
-         * UPDATED ROBUST SHIM FOR LUCIDE
-         * Uses lucide.createIcons which is the correct method for the browser global build
-         */
         const Icon = ({ name, size = 24, className = "" }) => {
             const iconRef = React.useRef(null);
-            
             React.useEffect(() => {
                 if (iconRef.current && window.lucide) {
-                    // Create the placeholder element lucide expects
                     const iconElem = document.createElement('i');
                     iconElem.setAttribute('data-lucide', name);
-                    
-                    // Clear and append
                     iconRef.current.innerHTML = '';
                     iconRef.current.appendChild(iconElem);
-                    
-                    // Trigger lucide to replace the <i> with <svg>
                     window.lucide.createIcons({
                         attrs: {
                             width: size,
@@ -349,18 +380,15 @@
                     });
                 }
             }, [name, size, className]);
-
             return <span ref={iconRef} className={`inline-flex items-center justify-center ${className}`} />;
         };
 
-        // Standard Icon Wrappers for user code compatibility
         const TrendingUp = (props) => <Icon name="trending-up" {...props} />;
         const Users = (props) => <Icon name="users" {...props} />;
         const DollarSign = (props) => <Icon name="dollar-sign" {...props} />;
         const PieChart = (props) => <Icon name="pie-chart" {...props} />;
         const Target = (props) => <Icon name="target" {...props} />;
         const ArrowUpRight = (props) => <Icon name="arrow-up-right" {...props} />;
-        const ChevronRight = (props) => <Icon name="chevron-right" {...props} />;
         const GraduationCap = (props) => <Icon name="graduation-cap" {...props} />;
         const LayoutDashboard = (props) => <Icon name="layout-dashboard" {...props} />;
         const Map = (props) => <Icon name="map" {...props} />;
@@ -387,17 +415,14 @@
           const calculateFinancials = (students, teachers, currentRegion) => {
             const p = pricing[currentRegion];
             const m = isBearCase ? 0.8 : 1;
-            
             const subRev = (students * m) * ((0.6 * p.silver) + (0.3 * p.gold) + (0.1 * p.platinum));
             const teacherRev = (teachers * m * 0.15) * p.cert; 
             const revShare = (students * m * 0.2 * 1000 * 0.3);
             const totalRev = subRev + teacherRev + revShare + (students * m * 150);
-
             const marketing = ((students * m) * p.cac) / 12;
             const tech = 800000 + (students * m * 120);
             const payroll = 1200000 + (totalRev * 0.12);
             const totalExp = marketing + tech + payroll;
-
             return { totalRev, subRev, teacherRev, revShare, totalExp, marketing, tech, payroll, ebitda: totalRev - totalExp };
           };
 
@@ -425,7 +450,6 @@
                 </div>
                 <span className="font-black text-xl text-white tracking-tighter uppercase">Muziclly</span>
               </div>
-              
               <div className="space-y-2 flex-1">
                 {[
                   { id: 'overview', icon: LayoutDashboard, label: 'Overview' },
@@ -447,22 +471,13 @@
                   </button>
                 ))}
               </div>
-
               <div className="pt-6 border-t border-slate-800 space-y-4">
                 <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700">
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-[10px] font-black uppercase">Region</span>
                     <span className="text-[10px] font-black uppercase text-indigo-400">{region}</span>
                   </div>
-                  <button 
-                    onClick={() => setRegion(region === 'IN' ? 'US' : 'IN')}
-                    className="w-full text-xs font-bold py-2 bg-slate-700 rounded-lg text-white"
-                  >
-                    Switch to {region === 'IN' ? 'USA' : 'INDIA'}
-                  </button>
-                </div>
-                <div className="text-[10px] font-bold text-slate-600 text-center uppercase tracking-widest">
-                  Proprietary & Confidential
+                  <button onClick={() => setRegion(region === 'IN' ? 'US' : 'IN')} className="w-full text-xs font-bold py-2 bg-slate-700 rounded-lg text-white">Switch to {region === 'IN' ? 'USA' : 'INDIA'}</button>
                 </div>
               </div>
             </div>
@@ -477,16 +492,10 @@
               <div className="flex items-center gap-4 text-slate-900">
                 <div className="flex items-center gap-2 bg-amber-50 border border-amber-100 px-4 py-1.5 rounded-full">
                   <span className="text-[10px] font-black text-amber-700 uppercase">Case:</span>
-                  <button 
-                    onClick={() => setIsBearCase(!isBearCase)}
-                    className={`w-8 h-4 rounded-full relative transition-colors ${isBearCase ? 'bg-amber-500' : 'bg-slate-300'}`}
-                  >
+                  <button onClick={() => setIsBearCase(!isBearCase)} className={`w-8 h-4 rounded-full relative transition-colors ${isBearCase ? 'bg-amber-500' : 'bg-slate-300'}`}>
                     <div className={`absolute top-0.5 w-3 h-3 bg-white rounded-full transition-all ${isBearCase ? 'left-[18px]' : 'left-0.5'}`} />
                   </button>
                   <span className="text-[10px] font-black text-slate-600 uppercase">{isBearCase ? 'Bear' : 'Base'}</span>
-                </div>
-                <div className="h-10 w-10 rounded-full bg-slate-100 flex items-center justify-center border border-slate-200 cursor-pointer">
-                  <Search size={18} className="text-slate-400" />
                 </div>
               </div>
             </div>
@@ -497,7 +506,6 @@
               <Sidebar />
               <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
                 <Header />
-                
                 <main className="p-8 w-full mx-auto">
                   {activeTab === 'overview' && (
                     <div className="space-y-8 animate-in fade-in duration-500">
@@ -505,147 +513,26 @@
                         <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
                           <p className="text-slate-400 text-[10px] font-black uppercase mb-1">Target Rev (Y5)</p>
                           <div className="text-2xl font-black text-slate-900">₹342 Cr</div>
-                          <div className="flex items-center gap-1 text-emerald-500 text-[10px] font-bold mt-1">
-                            <ArrowUpRight size={12} /> 25% Growth
-                          </div>
                         </div>
                         <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
                           <p className="text-slate-400 text-[10px] font-black uppercase mb-1">LTV/CAC</p>
                           <div className="text-2xl font-black text-slate-900">12.4x</div>
-                          <div className="flex items-center gap-1 text-indigo-500 text-[10px] font-bold mt-1">Industry High</div>
                         </div>
                         <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
                           <p className="text-slate-400 text-[10px] font-black uppercase mb-1">Break-Even</p>
                           <div className="text-2xl font-black text-slate-900">M12</div>
-                          <div className="flex items-center gap-1 text-amber-500 text-[10px] font-bold mt-1">
-                            {isBearCase ? 'Adjusted: M18' : 'Target: Dec 2026'}
-                          </div>
                         </div>
                         <div className="bg-indigo-600 p-6 rounded-3xl text-white shadow-xl shadow-indigo-500/20">
                           <p className="text-indigo-200 text-[10px] font-black uppercase mb-1 text-center">Current Fundraise</p>
                           <div className="text-2xl font-black text-center">₹50 Lakhs</div>
-                          <div className="text-[8px] font-bold uppercase text-center mt-1 opacity-70 font-black tracking-widest">Pre-Seed / Angel</div>
-                        </div>
-                      </div>
-
-                      <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200">
-                        <h3 className="text-2xl font-black mb-8 text-slate-900">The Global EdTech Opportunity</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-slate-600">
-                          <div>
-                            <div className="text-[10px] font-black text-indigo-500 uppercase mb-2 tracking-widest">The Gap</div>
-                            <p className="text-sm leading-relaxed">85% of online learners drop out due to lack of mentorship. Muziclly solves this via founder-led masterclasses and local teacher certifications.</p>
-                          </div>
-                          <div>
-                            <div className="text-[10px] font-black text-indigo-500 uppercase mb-2 tracking-widest">The Traction</div>
-                            <p className="text-sm leading-relaxed">Tiered subscription model ensures recurring revenue while teacher certifications build a long-term supply moat.</p>
-                          </div>
-                          <div>
-                            <div className="text-[10px] font-black text-indigo-500 uppercase mb-2 tracking-widest">The Scale</div>
-                            <p className="text-sm leading-relaxed">Expanding to NRI markets (US/Canada/UK) provides a 1.8x ARPU boost with standardized curriculum delivery.</p>
-                          </div>
                         </div>
                       </div>
                     </div>
                   )}
-
-                  {activeTab === 'market' && (
-                    <div className="space-y-8 text-slate-900 animate-in fade-in duration-500">
-                      <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200">
-                        <h3 className="text-2xl font-black mb-10 flex items-center gap-2"><Map className="text-indigo-500" /> Market Sizing & Dynamics</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                          <div className="space-y-6">
-                            <div className="flex items-center gap-6">
-                              <div className="h-16 w-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-black">TAM</div>
-                              <div>
-                                <div className="text-xl font-black">$3.32 Billion</div>
-                                <div className="text-xs text-slate-400 font-bold uppercase tracking-widest">Global Online Music Education</div>
-                              </div>
-                            </div>
-                            <div className="flex items-center gap-6">
-                              <div className="h-16 w-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black">SAM</div>
-                              <div>
-                                <div className="text-xl font-black">$450 Million</div>
-                                <div className="text-xs text-slate-400 font-bold uppercase tracking-widest">Urban India & Global Diaspora</div>
-                              </div>
-                            </div>
-                            <div className="flex items-center gap-6">
-                              <div className="h-16 w-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center font-black">SOM</div>
-                              <div>
-                                <div className="text-xl font-black">$41 Million</div>
-                                <div className="text-xs text-slate-400 font-bold uppercase tracking-widest">Muziclly Yr 5 Target</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6">Persona Analysis</h4>
-                            <div className="space-y-4">
-                              {['The Young Prodigy (K-12)', 'The Corporate Hobbyist', 'The Aspiring Maestro'].map((p, i) => (
-                                <div key={i} className="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
-                                  <span className="text-sm font-bold text-slate-700">{p}</span>
-                                  <span className="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-1 rounded-lg font-black uppercase tracking-tighter">High Intent</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {activeTab === 'strategy' && (
-                    <div className="space-y-8 text-slate-900 animate-in fade-in duration-500">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200">
-                          <h3 className="text-xl font-black mb-8 flex items-center gap-2 text-slate-900"><Layers className="text-indigo-500" /> SWOT Analysis</h3>
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-emerald-50 p-6 rounded-3xl border border-emerald-100">
-                              <span className="text-[10px] font-black text-emerald-700 uppercase tracking-widest">Strengths</span>
-                              <p className="text-xs mt-2 text-emerald-900 leading-relaxed font-medium">Certification Moat & Founder-Led Tier</p>
-                            </div>
-                            <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100">
-                              <span className="text-[10px] font-black text-amber-700 uppercase tracking-widest">Weaknesses</span>
-                              <p className="text-xs mt-2 text-amber-900 leading-relaxed font-medium">Scaling Mentor Classes (Initial)</p>
-                            </div>
-                            <div className="bg-blue-50 p-6 rounded-3xl border border-blue-100">
-                              <span className="text-[10px] font-black text-blue-700 uppercase tracking-widest">Opportunities</span>
-                              <p className="text-xs mt-2 text-blue-900 leading-relaxed font-medium">US Launch (1.8x ARPU)</p>
-                            </div>
-                            <div className="bg-rose-50 p-6 rounded-3xl border border-rose-100">
-                              <span className="text-[10px] font-black text-rose-700 uppercase tracking-widest">Threats</span>
-                              <p className="text-xs mt-2 text-rose-900 leading-relaxed font-medium">Low-cost AI Tutors</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="bg-slate-900 p-10 rounded-[2.5rem] text-white">
-                          <h3 className="text-xl font-black mb-8 flex items-center gap-2 text-indigo-400"><ListCheck /> Competitor Matrix</h3>
-                          <div className="space-y-4">
-                            {[
-                              { name: 'Muziclly', feature: 'Certification + Live Hybrid', status: 'Primary USP' },
-                              { name: 'Artium', feature: 'Celebrity Mentors', status: 'Premium Brand' },
-                              { name: 'Yousician', feature: 'AI Feedback App', status: 'Self-Paced' },
-                              { name: 'Furtados', feature: 'Physical Presence', status: 'Legacy' }
-                            ].map((comp, i) => (
-                              <div key={i} className="flex justify-between items-center py-3 border-b border-slate-800 last:border-0">
-                                <div>
-                                  <div className="text-sm font-bold">{comp.name}</div>
-                                  <div className="text-[10px] text-slate-500 font-medium">{comp.feature}</div>
-                                </div>
-                                <div className="text-[10px] font-black uppercase text-indigo-400">{comp.status}</div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
                   {activeTab === 'financials' && (
-                    <div className="space-y-8 animate-in fade-in duration-500">
-                      <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 text-slate-900">
-                        <div className="flex justify-between items-center mb-10">
-                          <h3 className="text-2xl font-black text-slate-900">Scalability Simulator</h3>
-                          <div className="bg-slate-100 px-4 py-2 rounded-xl text-xs font-bold text-slate-500 uppercase tracking-widest">Region: {region}</div>
-                        </div>
+                    <div className="space-y-8 animate-in fade-in duration-500 text-slate-900">
+                      <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200">
+                        <h3 className="text-2xl font-black mb-10">Scalability Simulator</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                           <div className="space-y-6">
                             {currentData.map((d, i) => (
@@ -657,118 +544,9 @@
                                 <div className="h-4 w-full bg-slate-50 rounded-full overflow-hidden flex border border-slate-100">
                                   <div className="bg-indigo-600 h-full" style={{ width: `${(d.fin.subRev / d.fin.totalRev) * 100}%` }}></div>
                                   <div className="bg-emerald-400 h-full" style={{ width: `${(d.fin.teacherRev / d.fin.totalRev) * 100}%` }}></div>
-                                  <div className="bg-amber-400 h-full" style={{ width: `${(d.fin.revShare / d.fin.totalRev) * 100}%` }}></div>
                                 </div>
                               </div>
                             ))}
-                            <div className="flex gap-6 pt-4">
-                              <div className="flex items-center gap-2 font-black uppercase text-[9px] text-slate-400"><div className="h-2 w-2 rounded-full bg-indigo-600"></div>Subs</div>
-                              <div className="flex items-center gap-2 font-black uppercase text-[9px] text-slate-400"><div className="h-2 w-2 rounded-full bg-emerald-400"></div>Certs</div>
-                              <div className="flex items-center gap-2 font-black uppercase text-[9px] text-slate-400"><div className="h-2 w-2 rounded-full bg-amber-400"></div>Share</div>
-                            </div>
-                          </div>
-                          <div className="bg-slate-900 rounded-[2rem] p-8 text-white flex flex-col justify-between">
-                            <h4 className="text-indigo-400 text-[10px] font-black uppercase tracking-widest mb-6 underline">Unit Economics</h4>
-                            <div className="space-y-6">
-                              <div className="flex justify-between items-end border-b border-slate-800 pb-4">
-                                <span className="text-slate-400 text-sm">Blended CAC</span>
-                                <span className="text-2xl font-black">{region === 'IN' ? '₹2,800' : '$85'}</span>
-                              </div>
-                              <div className="flex justify-between items-end border-b border-slate-800 pb-4">
-                                <span className="text-slate-400 text-sm">Gross Margin</span>
-                                <span className="text-2xl font-black text-emerald-400">~68%</span>
-                              </div>
-                              <div className="flex justify-between items-end">
-                                <span className="text-slate-400 text-sm">Payback</span>
-                                <span className="text-2xl font-black text-indigo-400">0.8 Mo</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {activeTab === 'teacher-unit' && (
-                    <div className="space-y-8 text-slate-900 animate-in fade-in duration-500">
-                       <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 overflow-hidden relative">
-                          <div className="absolute top-0 right-0 p-10 opacity-5"><GraduationCap size={140} /></div>
-                          <h3 className="text-2xl font-black mb-10 text-slate-900">Teacher Business Unit P&L</h3>
-                          <table className="w-full text-left text-sm">
-                            <thead>
-                              <tr className="border-b border-slate-100 text-[10px] font-black uppercase text-slate-400 tracking-widest">
-                                <th className="pb-4">Metric</th>
-                                <th className="pb-4 text-right">Year 1</th>
-                                <th className="pb-4 text-right">Year 2</th>
-                                <th className="pb-4 text-right">Year 5</th>
-                              </tr>
-                            </thead>
-                            <tbody className="divide-y divide-slate-50 font-medium">
-                              <tr>
-                                <td className="py-5">Cert Revenue</td>
-                                <td className="py-5 text-right text-slate-600">{formatCurrency(currentData[1].fin.teacherRev)}</td>
-                                <td className="py-5 text-right text-slate-600">{formatCurrency(currentData[2].fin.teacherRev)}</td>
-                                <td className="py-5 text-right font-black text-indigo-600">{formatCurrency(currentData[3].fin.teacherRev)}</td>
-                              </tr>
-                              <tr>
-                                <td className="py-5">Muziclly Share (30%)</td>
-                                <td className="py-5 text-right text-slate-600">{formatCurrency(currentData[1].fin.revShare)}</td>
-                                <td className="py-5 text-right text-slate-600">{formatCurrency(currentData[2].fin.revShare)}</td>
-                                <td className="py-5 text-right text-slate-600">{formatCurrency(currentData[3].fin.revShare)}</td>
-                              </tr>
-                              <tr className="bg-slate-50 font-black">
-                                <td className="py-5 text-xs uppercase text-slate-400 tracking-tighter">Segment Margin</td>
-                                <td className="py-5 text-right">74%</td>
-                                <td className="py-5 text-right">78%</td>
-                                <td className="py-5 text-right text-emerald-600">82%</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                       </div>
-                    </div>
-                  )}
-
-                  {activeTab === 'funding' && (
-                    <div className="space-y-8 text-slate-900 animate-in fade-in duration-500">
-                      <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200">
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
-                          <h3 className="text-2xl font-black text-slate-900">Capital Allocation Ask</h3>
-                          <div className="flex gap-2">
-                            {[5000000, 7500000].map(amt => (
-                              <button 
-                                key={amt}
-                                onClick={() => setFundingAmount(amt)}
-                                className={`px-6 py-3 rounded-2xl font-black text-xs transition-all tracking-widest uppercase ${fundingAmount === amt ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-100 text-slate-500'}`}
-                              >
-                                ₹{amt === 5000000 ? '50' : '75'} Lakhs
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-900">
-                          <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
-                            <div className="flex justify-between items-center mb-6">
-                              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total Runway</span>
-                              <span className="text-3xl font-black text-indigo-600 tracking-tighter">{Math.floor(fundingAmount / 450000)} Months</span>
-                            </div>
-                            <div className="space-y-4">
-                              {[{l:'Growth',v:55,c:'bg-indigo-600'},{l:'Product',v:30,c:'bg-emerald-500'},{l:'Ops',v:15,c:'bg-amber-500'}].map(item => (
-                                <div key={item.l}>
-                                  <div className="flex justify-between text-[9px] font-black uppercase text-slate-400 mb-1"><span>{item.l}</span><span>{item.v}%</span></div>
-                                  <div className="h-1.5 w-full bg-slate-200 rounded-full"><div className={`h-full ${item.c} rounded-full`} style={{width:`${item.v}%`}}></div></div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="flex flex-col justify-center gap-6">
-                            <div className="p-6 bg-indigo-600 text-white rounded-[2rem] shadow-xl">
-                              <h4 className="font-black text-lg mb-2 flex items-center gap-2 italic"><Rocket size={20} /> Deployment Strategy</h4>
-                              <p className="text-xs opacity-90 leading-relaxed font-medium">{fundingAmount === 5000000 ? "Scaling operations to 3k student milestone. Focus on Tier 1 marketing." : "Accelerates US pilot and high-margin NRI market entry."}</p>
-                            </div>
-                            <div className="p-6 bg-slate-900 text-white rounded-[2rem]">
-                              <h4 className="font-black text-lg mb-2 flex items-center gap-2 text-amber-400 font-heading"><Zap size={20} /> Exit Vision</h4>
-                              <p className="text-[9px] opacity-70 leading-relaxed uppercase tracking-[0.2em] font-bold">Series A readiness through hyper-efficient unit economics.</p>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -780,14 +558,10 @@
           );
         };
 
-        // Render the app
         try {
-            const container = document.getElementById('simulator-root');
-            const root = ReactDOM.createRoot(container);
+            const root = ReactDOM.createRoot(document.getElementById('simulator-root'));
             root.render(<App />);
-        } catch (e) {
-            console.error("React Render Error:", e);
-        }
+        } catch (e) { console.error("React Render Error:", e); }
     </script>
 
 </body>
